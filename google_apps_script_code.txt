@@ -1,0 +1,23 @@
+// KODE UNTUK GOOGLE APPS SCRIPT (Google Spreadsheet)
+// 1. Buka Spreadsheet -> Ekstensi -> Apps Script
+// 2. Paste kode di bawah ini:
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var timestamp = new Date();
+  
+  var nama = e.parameter.nama;
+  var kelas = e.parameter.kelas;
+  var mapel = e.parameter.mapel;
+  var nilai = e.parameter.nilai;
+  
+  sheet.appendRow([timestamp, nama, kelas, mapel, nilai]);
+  
+  return ContentService
+    .createTextOutput(JSON.stringify({ "result": "success", "message": "Data berhasil disimpan" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// 3. Simpan. Klik Terapkan (Deploy) -> Deployment Baru -> Aplikasi Web.
+// 4. Akses: Semua Orang (Anyone).
+// 5. Salin URL Web App dan paste ke dalam file script.js

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Belajar IPS Kelas 11</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Input Nilai / Absensi IPS Kelas 11</h2>
+        
+        <form id="form-ips">
+            <label>Nama Lengkap:</label>
+            <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+            
+            <label>Kelas:</label>
+            <input type="text" name="kelas" value="11 IPS 1" required>
+            
+            <label>Mata Pelajaran:</label>
+            <select name="mapel" required>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Sejarah">Sejarah</option>
+                <option value="Geografi">Geografi</option>
+                <option value="Sosiologi">Sosiologi</option>
+            </select>
+            
+            <label>Nilai / Pesan:</label>
+            <input type="text" name="nilai" placeholder="Masukkan nilai atau pesan" required>
+            
+            <button type="submit" id="btn-submit">Kirim Data</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
